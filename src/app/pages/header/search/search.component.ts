@@ -1,6 +1,6 @@
 import { Component, inject, OnInit  } from '@angular/core';
-import { CartService } from '../../services/cart.service';
-import { IProduct } from '../../models/products.model'; 
+import { CartService } from '../../../services/cart.service';
+import { IProduct } from '../../../models/products.model'; 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',

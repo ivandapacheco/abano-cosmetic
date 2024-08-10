@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
 import { LogoComponent } from './logo/logo.component';
+import { CartComponent} from '../cart/cart.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SearchComponent } from './search/search.component';
 import { ShopComponent } from './shop/shop.component';
+import { RouterLink } from '@angular/router'
 
 
 
@@ -19,7 +21,9 @@ import { ShopComponent } from './shop/shop.component';
     ShopComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterLink,
+    CartComponent
   ],
   exports:[
     HeaderComponent

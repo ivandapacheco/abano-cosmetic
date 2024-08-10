@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ITestimony, testimonies,responsiveOptions } from '../../models/testimony.model'; 
+import { ITestimony, testimonies,responsiveOptions } from '../../../models/testimony.model'; 
 
 @Component({
   selector: 'app-testimony',
