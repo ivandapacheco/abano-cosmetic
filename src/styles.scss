@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Montserrat:wght@200..700&display=swap');
+
+$oswald:'oswald';
+$montserrat: 'montserrat';
+
+$primary-color: #EB6D9D;
+$primary-color-hover: #D65C8B;
+
+.oswald{
+    font-family:$oswald , sans-serif;
+}
+
+.oswald-300{
+    font-family:$oswald , sans-serif;
+    font-weight: 300;
+}
+.oswald-400{
+    font-family:$oswald , sans-serif;
+    font-weight: 400;
+}
+.oswald-500{
+    font-family:$oswald , sans-serif;
+    font-weight: 500;
+}
+
+.montserrat{
+    font-family: $montserrat, sans-serif;
+}
+.montserrat-300{
+    font-family: $montserrat, sans-serif;
+    font-weight: 300; 
+}
+.montserrat-400{
+    font-family: $montserrat, sans-serif;
+    font-weight: 400; 
+}
+.montserrat-500{
+    font-family: $montserrat, sans-serif;
+    font-weight: 500; 
+}
+.montserrat-600{
+    font-family: $montserrat, sans-serif;
+    font-weight: 600; 
+}
+.montserrat-700{
+    font-family: $montserrat, sans-serif;
+    font-weight: 700; 
+}
+
+.background{
+    background-color: $primary-color;
+}
+
+.btn-primary-color{
+    background-color: $primary-color;
+}
+
+.btn-primary-color:hover{
+    background-color: $primary-color-hover;
+    transition: background-color 0.3s ease;
+}
+.color{
+    color:$primary-color
+}
+.text-hover:hover{
+    color: $primary-color;
+    transition: color .5s ease;
+}
+.active{
+    font-weight: 700;
+    color: $primary-color !important;
+}

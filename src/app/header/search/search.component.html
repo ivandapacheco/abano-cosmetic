@@ -1,0 +1,117 @@
+<!-- <div class="row bg-danger">
+  <div class="bg-warning m-2 col-lg-5 input-group mb-3">
+    <input type="text" class="form-control border-0 focus" placeholder="Search Abano cosmetics" aria-label="Search">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary border-0" type="button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+    
+  </div>
+  
+  <div class="col-lg-2">
+    <i class="fas fa-user"></i>
+  </div>
+
+  <div class="col-lg-2">
+    <i class="fas fa-shopping-cart"></i>
+  </div>
+</div>
+   -->
+
+<div class="container  pt-4">
+  <div class="row ">
+
+    <div class="col-lg-2">
+
+    </div>
+
+    <!-- DIV 1 -->
+    <div class="col-lg-8 d-flex border border-black rounded">
+      <input type="text" class="form-control border-0 focus " placeholder="Search Abano cosmetics...">
+      <button class="btn-focus text-hover"><i class="fas fa-search"></i></button>
+    </div>
+
+    <!-- DIV 2 -->
+    <div class="row col-lg-2 ">
+
+      <div class="col-lg-4"></div>
+
+      <div class="col-lg-4 d-flex align-items-end fs-5 ">
+        <button type="button" class="btn btn-primar position-relative">
+          <i class="far fa-user"></i>
+        </button> 
+      </div>
+    
+      <div class="col-lg-4 d-flex align-items-end fs-5 ">
+
+        <button type="button" class="btn btn-primar position-relative" data-bs-toggle="modal" data-bs-target="#productListModal" (click)="llenarArrayProduct()">
+          <i class="fas  fa-shopping-cart"> </i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            {{_cartService.addToCartCount()}}
+            <span class="visually-hidden">Add products</span>
+          </span>
+        </button>
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- <button class="btn btn-primary" (click)="sumarUnoAlCarrito()">sumar 1</button> -->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="productListModal" tabindex="-1" aria-labelledby="productListModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <!-- Cabecera del modal -->
+      <div class="modal-header background">
+        <h5 class="modal-title text-white" id="productListModalLabel">Lista de productos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- Cuerpo del modal -->
+      <div class="modal-body">
+        <!-- Aquí puedes agregar la lista de productos -->
+       
+
+          @for (cartProduct of cartProducts; track $index) {    
+            <div class="card mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img [src]="cartProducts[$index].img" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">{{cartProducts[$index].nameProduct}}</h5>
+                    <p class="card-text">{{cartProducts[$index].price}}</p>       
+                  </div>
+                </div>
+              </div>
+            </div>
+          }@empty {
+            <div class="container">
+              <div class="card">
+                <h3 class="text-danger">No hay productos seleccionados aún. Por favor elige</h3>
+              </div>
+            </div>
+          }
+
+        
+        
+
+
+      </div>
+      <!-- Pie del modal -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Ir Pagar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS y dependencias -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

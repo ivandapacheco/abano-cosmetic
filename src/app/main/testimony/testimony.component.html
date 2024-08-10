@@ -1,0 +1,37 @@
+<div class="">
+    <h4 class="text-center underline oswald-500">CUSTOMER REVIEWS</h4>
+    
+    <div class="mt-5">
+      <p-carousel 
+        [value]="testimonies" 
+        [numVisible]="6" 
+        [numScroll]="1" 
+        [responsiveOptions]="responsiveOptions">
+        >
+          <ng-template let-testimony pTemplate="item">
+              <div class="card-body">
+                <div class="card-content mb-3">
+                  <div class="text-center">
+                    <div class="mb-2">
+                      <img src="assets/img/comillas.png" alt="comillas" class="img-fluid">
+                    </div>
+                    <div>
+                      <img src="assets/img/estrellas.png" alt="estrellas" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center card-text mb-3 custom-font-size montserrat-400 fst-italic">
+                  {{testimony.comentario}}
+                </div>
+                
+                <div class="text-center card-content custom-font-size montserrat-600">
+                    {{testimony.nombre}} {{testimony.apellido}}  
+                </div>
+              </div>
+          </ng-template>
+      </p-carousel>
+  </div>
+     
+    
+</div>
+

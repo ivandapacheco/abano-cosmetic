@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="container__testimony">
+        <h4 class="text-center underline text-uppercase oswald-500">Best selling products</h4>
+        
+        <div class="mt-4">
+          <p-carousel 
+            [value]="products" 
+            [numVisible]="4" 
+            [numScroll]="1" 
+            [responsiveOptions]="responsiveOptions">
+            >
+              <ng-template let-product pTemplate="item">
+                  <div class="card m-2">
+                    <div class="card-body">
+                        <div class="card-content text-center mb-3">
+                          <img [src]="product.img" alt="comillas" class="img-fluid rounded">
+                           <!-- <img src="assets/img/radiance-glow-serum.png" alt="comillas" class="img-fluid rounded"> -->
+                        </div>
+
+                        <div class="text-center montserrat-600 text-uppercase fs-5 mb-3 height d-flex align-items-center">
+                          {{product.nameProduct}}
+                        </div>
+                        
+                        <div class="card-content montserrat-700 text-center fs-3">
+                            {{product.price | currency}}  
+                        </div>
+
+                        <div class=" text-center my-3">
+                            <button class="text-uppercase btn btn-primary-color montserrat-600 fs-6 text" (click)="onAddToCart(product)">Add to cart</button>
+                        </div>
+                        
+                      </div>
+                  </div>
+              </ng-template>
+          </p-carousel>
+      </div>
+         
+        
+    </div>
+    
+    
+    
+</div>
