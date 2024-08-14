@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Montserrat:wght@200..700&display=swap');
+@import "primeicons/primeicons.css";
 
 $oswald:'oswald';
 $montserrat: 'montserrat';
 
 $primary-color: #EB6D9D;
 $primary-color-hover: #D65C8B;
+
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 .oswald{
     font-family:$oswald , sans-serif;
@@ -58,6 +65,16 @@ $primary-color-hover: #D65C8B;
 .btn-primary-color:hover{
     background-color: $primary-color-hover;
     transition: background-color 0.3s ease;
+}
+.btn-primary-color-outline{
+    background-color: inherit;
+    border: 2px solid $primary-color-hover;
+    color:$primary-color
+}
+.btn-primary-color-outline:hover{
+    background-color:$primary-color;
+    color: white;
+    transition:  0.5s ease;
 }
 .color{
     color:$primary-color

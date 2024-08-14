@@ -1,22 +1,19 @@
-
-    <!-- <app-logo></app-logo>
-    <app-navigation></app-navigation>
-    <app-search></app-search>
-    <app-shop></app-shop>
-    <app-about></app-about> -->
-
-   <div class="row">
-    <div class="col-lg-4">
-        <app-logo></app-logo>
-    </div>
-
-    <div class="col-lg-8">
-        <app-search></app-search>
-    </div>
-   </div>
+<div class="row "style="position: sticky; top: 0; z-index: 1020; background-color: white;">
     
-    <app-navigation></app-navigation>
+    <div class="col-lg-11 ">
+        <app-navigation></app-navigation>
+    </div>
 
+    <div class="col-lg-1 d-flex align-items-center justify-content-end">
+        <div class="col-lg-6 fs-5">
+            <button type="button" class="btn ">
+                <i class="far fa-user"></i>
+            </button>
+        </div>
+    
+        <div class="col-lg-6 fs-5">
+            <app-cart></app-cart>
+        </div>
+    </div>
 
-
-  
+</div>
